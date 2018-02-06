@@ -1,4 +1,5 @@
 # Flux
+轮子基于react + react-router 4.2 + rudex
 
 flux用于剥离mvc的c层，跟react的架构变成mv + flux架构
 
