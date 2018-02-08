@@ -3,14 +3,19 @@ const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case 'ADD':
       console.log('dispatch ADD')
-      console.log(state + action.num)
-      return state + action.num;
-      break;
+      console.log(state)
+      let counting = state.count + action.num
+      return {
+        count: counting,
+        name: 'mainTree'
+      };
     default:
       console.log('dispatch default')
       console.log(action.type)
-      return state;
-      break;
+      return {
+        count: 0,
+        name: 'mainTree'
+      };
   }
 }
 
