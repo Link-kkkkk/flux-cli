@@ -1,5 +1,5 @@
 export default (state = 0, action) => {
-  console.log(state)
+  // console.log(state)
   switch (action.type) {
     case 'INCREMENT':
       return state + 1
