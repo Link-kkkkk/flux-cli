@@ -14,25 +14,29 @@ const store = createStore(reducer)
 class Statebase extends Component {
   constructor(props) {
     super(props);
-    this.disp = this.disp.bind(this);
     this.state = {
       count:0
     }
+
+    this.disp = this.disp.bind(this);
+    this.geting = this.geting.bind(this);
   }
 
   disp() {
     store.dispatch(action('testId',10));
+    this.geting()
   }
 
   geting() {
-    console.log(store.getState())
-  }
-
-  componentWillMount(){
     let stateCount = store.getState()
+
     this.setState((prevState, props) => ({
       count: stateCount.count
     }));
+  }
+
+  componentWillMount(){
+
   }
 
   render() {
